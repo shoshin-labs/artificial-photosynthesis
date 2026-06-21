@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Artificial photosynthesis bottleneck diagram</title>
+  <desc id="desc">A stacked view of the main barriers: cost, durability, selectivity, and scale-up.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0d1a2d"/>
+      <stop offset="100%" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffb38a"/>
+      <stop offset="100%" stop-color="#ffe08a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700">The ordinary hard parts</text>
+  <text x="60" y="120" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">These are less glamorous than the chemistry, but they decide whether anything ships.</text>
+
+  <g transform="translate(70,180)">
+    <rect x="0" y="0" width="250" height="320" rx="30" fill="rgba(255,255,255,0.04)" stroke="rgba(173,213,255,0.18)"/>
+    <rect x="26" y="34" width="198" height="50" rx="16" fill="rgba(255,179,138,0.22)"/>
+    <rect x="26" y="98" width="168" height="50" rx="16" fill="rgba(255,179,138,0.18)"/>
+    <rect x="26" y="162" width="144" height="50" rx="16" fill="rgba(255,179,138,0.14)"/>
+    <rect x="26" y="226" width="120" height="50" rx="16" fill="rgba(255,179,138,0.1)"/>
+    <text x="26" y="365" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="18">Tallest bar = biggest headache.</text>
+  </g>
+
+  <g transform="translate(390,190)">
+    <rect width="740" height="300" rx="30" fill="rgba(255,255,255,0.04)" stroke="rgba(173,213,255,0.18)"/>
+    <g font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#eef5ff">
+      <text x="40" y="74">Cost</text>
+      <text x="40" y="142">Durability</text>
+      <text x="40" y="210">Selectivity</text>
+      <text x="40" y="278">Scale-up</text>
+    </g>
+    <g>
+      <rect x="220" y="40" width="470" height="34" rx="17" fill="rgba(255,255,255,0.08)"/>
+      <rect x="220" y="40" width="430" height="34" rx="17" fill="url(#accent)"/>
+      <rect x="220" y="108" width="470" height="34" rx="17" fill="rgba(255,255,255,0.08)"/>
+      <rect x="220" y="108" width="390" height="34" rx="17" fill="url(#accent)"/>
+      <rect x="220" y="176" width="470" height="34" rx="17" fill="rgba(255,255,255,0.08)"/>
+      <rect x="220" y="176" width="340" height="34" rx="17" fill="url(#accent)"/>
+      <rect x="220" y="244" width="470" height="34" rx="17" fill="rgba(255,255,255,0.08)"/>
+      <rect x="220" y="244" width="310" height="34" rx="17" fill="url(#accent)"/>
+    </g>
+  </g>
+</svg>

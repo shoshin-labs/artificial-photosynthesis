@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Energy pathway comparison diagram</title>
+  <desc id="desc">A comparison of batteries, electrolysis, and artificial photosynthesis with different use cases.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0e1b2e"/>
+      <stop offset="100%" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#78d9ff"/>
+      <stop offset="100%" stop-color="#a8ffb1"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffb38a"/>
+      <stop offset="100%" stop-color="#ffe08a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700">Different tools, different jobs</text>
+  <text x="60" y="120" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">This is about fit, not a universal winner.</text>
+
+  <g transform="translate(60,160)">
+    <rect width="340" height="430" rx="26" fill="rgba(255,255,255,0.04)" stroke="rgba(173,213,255,0.18)"/>
+    <text x="28" y="56" fill="#78d9ff" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="700">Batteries</text>
+    <rect x="28" y="88" width="284" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+    <rect x="28" y="88" width="252" height="18" rx="9" fill="url(#bar1)"/>
+    <text x="28" y="145" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Best when</text>
+    <text x="28" y="178" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">You want electricity fast.</text>
+    <text x="28" y="245" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Weak spot</text>
+    <text x="28" y="278" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">Less suited to fuels and molecules.</text>
+  </g>
+
+  <g transform="translate(430,160)">
+    <rect width="340" height="430" rx="26" fill="rgba(255,255,255,0.04)" stroke="rgba(173,213,255,0.18)"/>
+    <text x="28" y="56" fill="#a8ffb1" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="700">Electrolysis</text>
+    <rect x="28" y="88" width="284" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+    <rect x="28" y="88" width="222" height="18" rx="9" fill="url(#bar1)"/>
+    <text x="28" y="145" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Best when</text>
+    <text x="28" y="178" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">You already want hydrogen.</text>
+    <text x="28" y="245" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Weak spot</text>
+    <text x="28" y="278" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">Extra steps for liquid fuels.</text>
+  </g>
+
+  <g transform="translate(800,160)">
+    <rect width="340" height="430" rx="26" fill="rgba(255,255,255,0.04)" stroke="rgba(173,213,255,0.18)"/>
+    <text x="28" y="56" fill="#ffb38a" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="700">Artificial photosynthesis</text>
+    <rect x="28" y="88" width="284" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+    <rect x="28" y="88" width="190" height="18" rx="9" fill="url(#bar2)"/>
+    <text x="28" y="145" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Best when</text>
+    <text x="28" y="178" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">You want sunlight → molecules.</text>
+    <text x="28" y="245" fill="#eef5ff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Weak spot</text>
+    <text x="28" y="278" fill="#a9bdd7" font-family="Inter, system-ui, sans-serif" font-size="20">Still early and cost-sensitive.</text>
+  </g>
+</svg>

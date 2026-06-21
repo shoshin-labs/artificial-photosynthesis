@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A mobile-first explainer for artificial photosynthesis: plain questions and answers, clear charts, and honest bottlenecks." />
+  <meta name="description" content="A mobile-first explainer for artificial photosynthesis: plain questions and answers, diagrams, charts, references, and honest bottlenecks." />
   <meta property="og:title" content="Artificial Photosynthesis" />
-  <meta property="og:description" content="A mobile-first Q&A explainer with charts for artificial photosynthesis." />
+  <meta property="og:description" content="A mobile-first Q&A explainer with diagrams, charts, and references." />
   <meta property="og:type" content="website" />
   <title>Artificial Photosynthesis</title>
   <link rel="stylesheet" href="styles.css" />
@@ -18,8 +18,9 @@
       <a class="brand" href="#top">Artificial Photosynthesis</a>
       <div class="pills" aria-label="Jump links">
         <a href="#qa">Questions</a>
+        <a href="#diagrams">Diagrams</a>
         <a href="#charts">Charts</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#take">My take</a>
         <a href="#sources">Sources</a>
       </div>
     </nav>
@@ -28,10 +29,10 @@
       <section class="hero-copy">
         <p class="eyebrow">Mobile-first explainer</p>
         <h1>What if sunlight made fuel, not just electricity?</h1>
-        <p class="lede">Artificial photosynthesis is the idea of using sunlight, water, and captured CO₂ to make useful molecules you can store, ship, and use later. This page keeps it simple: short answers, a few clear charts, and an honest look at what is still hard.</p>
+        <p class="lede">Artificial photosynthesis tries to use sunlight to make molecules you can store, ship, and burn later. The point is not to replace every battery or solar panel. It is to make the hard-to-electrify stuff a bit less impossible.</p>
         <div class="hero-actions">
           <a class="button primary" href="#qa">Start with the questions</a>
-          <a class="button secondary" href="#charts">Jump to the charts</a>
+          <a class="button secondary" href="#sources">See the references</a>
         </div>
       </section>
 
@@ -39,13 +40,13 @@
         <div class="summary-card">
           <span class="summary-kicker">In one line</span>
           <strong>Turn sunlight into storable molecules.</strong>
-          <p>That means hydrogen, methanol, or synthetic fuels rather than only electrons.</p>
+          <p>That can mean hydrogen, methanol, or synthetic fuels rather than only electrons.</p>
         </div>
         <div class="summary-grid">
-          <div><span>Best for</span><strong>Storage and fuel</strong></div>
+          <div><span>Best for</span><strong>Storage and fuels</strong></div>
           <div><span>Main challenge</span><strong>Efficiency</strong></div>
           <div><span>Still early?</span><strong>Yes</strong></div>
-          <div><span>Why care?</span><strong>Hard-to-electrify uses</strong></div>
+          <div><span>Why care?</span><strong>Industries that need molecules</strong></div>
         </div>
       </aside>
     </div>
@@ -55,11 +56,11 @@
     <section class="section note-strip">
       <article class="callout">
         <h2>Short version</h2>
-        <p>Solar panels make electricity. Artificial photosynthesis tries to make molecules instead — especially when you want long-duration storage, shipping, or fuels for industries that do not want batteries.</p>
+        <p>Solar panels make electricity. Artificial photosynthesis tries to make chemical energy directly — useful where you need long-duration storage, transportable fuels, or feedstocks for industry.</p>
       </article>
       <article class="callout">
-        <h2>What this page is not</h2>
-        <p>It is not a hype deck. It is not claiming the economics are solved. It is a straightforward explainer for people who want the idea, the tradeoffs, and the current limits.</p>
+        <h2>What this page is trying to do</h2>
+        <p>Explain the idea plainly, show a few diagrams, cite a handful of solid sources, and give an opinion without pretending the economics are solved.</p>
       </article>
     </section>
 
@@ -73,28 +74,28 @@
         <details class="qa-card" open>
           <summary>What is artificial photosynthesis?</summary>
           <div class="qa-body">
-            <p>It is a way of using sunlight to drive chemistry. Instead of only making power, the system tries to make fuel or feedstock molecules such as hydrogen, methanol, or synthetic hydrocarbons.</p>
+            <p>It is a family of approaches that try to copy the useful part of natural photosynthesis: capture sunlight and use it to drive chemistry. Most versions aim to make a solar fuel such as hydrogen or a carbon-based liquid fuel.<sup><a href="#ref-1">[1]</a></sup></p>
           </div>
         </details>
 
         <details class="qa-card">
           <summary>Why does it matter?</summary>
           <div class="qa-body">
-            <p>Electricity is great for lots of things, but not everything. Molecules are better when energy needs to be stored for a long time, moved across distance, or used where liquid fuels or chemical feedstocks are still useful.</p>
+            <p>Because not everything should become electricity. Planes, ships, certain chemicals, and some industrial heat problems want molecules more than electrons. That is where solar fuels start sounding less romantic and more practical.<sup><a href="#ref-2">[2]</a></sup></p>
           </div>
         </details>
 
         <details class="qa-card">
           <summary>What can it make?</summary>
           <div class="qa-body">
-            <p>The main paths are hydrogen, methanol, and synthetic aviation fuel. Hydrogen is the simplest starting point; methanol and SAF matter when you want liquids and carbon-based fuels.</p>
+            <p>The usual suspects are hydrogen, methanol, formate, and synthetic hydrocarbons. Hydrogen is the most direct target; liquid fuels get interesting when storage and transport matter more than simplicity.<sup><a href="#ref-3">[3]</a></sup></p>
           </div>
         </details>
 
         <details class="qa-card">
           <summary>How does it work?</summary>
           <div class="qa-body">
-            <p>A simple version is: sunlight gets captured, water gets split, and then the chemistry is steered toward a useful molecule. If you add captured CO₂, the system can make carbon-based fuels instead of only hydrogen.</p>
+            <p>A simple version is: sunlight gets captured, water gets split, and the chemistry is steered toward a useful molecule. If you add captured CO₂, the system can make carbon-based fuels instead of only hydrogen.<sup><a href="#ref-4">[4]</a></sup></p>
 
             <div class="flow-chart" aria-label="How artificial photosynthesis works">
               <div class="flow-step">
@@ -127,29 +128,51 @@
         <details class="qa-card">
           <summary>What is hard about it?</summary>
           <div class="qa-body">
-            <p>The hard parts are making catalysts last, keeping the reaction selective, surviving outdoor conditions, and doing it all at a cost that beats simpler options.</p>
+            <p>The hard parts are making catalysts last, keeping the reaction selective, surviving outdoor conditions, and doing it all at a cost that can compete with simpler options. That is why the best lab result is not the same thing as a business.<sup><a href="#ref-5">[5]</a></sup></p>
           </div>
         </details>
 
         <details class="qa-card">
           <summary>When could it matter?</summary>
           <div class="qa-body">
-            <p>First in pilots, then in industrial niches where the product is valuable enough to justify the complexity. If costs fall and durability improves, it could become much more interesting at scale.</p>
+            <p>Probably first in small, high-value niches rather than everywhere at once. If durability and cost improve enough, it could move from “interesting” to “useful” in places where liquid fuel or feedstock has a real advantage.<sup><a href="#ref-6">[6]</a></sup></p>
           </div>
         </details>
+      </div>
+    </section>
+
+    <section id="diagrams" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Diagrams</p>
+        <h2>Three visual shortcuts for the whole story.</h2>
+      </div>
+
+      <div class="diagram-grid">
+        <figure class="diagram-card wide">
+          <img src="assets/flow.svg" alt="Diagram showing sunlight entering a reactor, water and carbon dioxide being processed, and fuel coming out." />
+          <figcaption>Basic flow: sunlight in, molecules out.</figcaption>
+        </figure>
+        <figure class="diagram-card">
+          <img src="assets/pathways.svg" alt="Diagram comparing batteries, electrolysis, and artificial photosynthesis across different use cases." />
+          <figcaption>Where artificial photosynthesis fits compared with batteries and electrolysis.</figcaption>
+        </figure>
+        <figure class="diagram-card">
+          <img src="assets/barriers.svg" alt="Diagram showing the main bottlenecks: cost, durability, selectivity, and scale-up." />
+          <figcaption>The bottlenecks are annoyingly ordinary: cost, durability, selectivity, scale-up.</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="charts" class="section">
       <div class="section-heading">
         <p class="eyebrow">Charts</p>
-        <h2>Three visuals that do the explaining.</h2>
+        <h2>Three charts that do the explaining.</h2>
       </div>
 
       <div class="chart-grid">
         <article class="chart-card">
           <h3>Which pathway is easiest to understand?</h3>
-          <p class="chart-note">Relative fit, not a precise scientific ranking.</p>
+          <p class="chart-note">Relative fit, not a scientific ranking of all possibilities.</p>
           <div class="bar-list">
             <div class="bar-row">
               <div class="bar-head"><strong>Hydrogen</strong><span>Simplest starting point</span></div>
@@ -191,7 +214,7 @@
 
         <article class="chart-card wide-card">
           <h3>Where does it fit compared with other options?</h3>
-          <p class="chart-note">A quick way to think about the use case.</p>
+          <p class="chart-note">The point is not to pick a winner. It is to see the niche.</p>
           <div class="comparison-grid" role="table" aria-label="Comparison of energy options">
             <div class="comparison-head" role="row">
               <span role="columnheader">Option</span>
@@ -214,6 +237,27 @@
               <span role="cell">Still early and cost-sensitive</span>
             </div>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="take" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">My take</p>
+        <h2>The honest view, not the brochure view.</h2>
+      </div>
+      <div class="opinion-grid">
+        <article class="opinion-card">
+          <h3>What seems likely</h3>
+          <p>This will probably become a niche tool first, not a universal replacement for batteries or grid power. The earliest wins will be places where making molecules matters more than making electrons.</p>
+        </article>
+        <article class="opinion-card">
+          <h3>What I would bet on</h3>
+          <p>Hydrogen and a few liquid-fuel or feedstock routes make the most sense as early products. They keep the story concrete and avoid promising a miracle that the hardware cannot yet deliver.</p>
+        </article>
+        <article class="opinion-card">
+          <h3>What would change my mind</h3>
+          <p>If a system proves strong outdoor durability, low cost, and decent selectivity at pilot scale, then the conversation gets a lot more serious. Until then, it is a promising lab story with a long road to commercial relevance.<sup><a href="#ref-7">[7]</a></sup></p>
         </article>
       </div>
     </section>
@@ -244,17 +288,26 @@
 
     <section id="sources" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Source note</p>
-        <h2>Built from the briefing, but simplified to explain the idea plainly.</h2>
+        <p class="eyebrow">References</p>
+        <h2>Sources used to ground the explainer.</h2>
       </div>
       <div class="source-card">
-        <p>The original material covered market size, catalyst breakthroughs, and the timeline for scale-up. This version turns that into a simpler public explainer with a question-first structure.</p>
+        <p class="source-intro">A few accessible references and review articles that support the plain-English summary above. They are not exhaustive; they are the ones that make the basic story feel grounded rather than hand-wavy.</p>
+        <ol class="reference-list">
+          <li id="ref-1"><a href="https://en.wikipedia.org/wiki/Artificial_photosynthesis" target="_blank" rel="noreferrer">Wikipedia — Artificial photosynthesis</a><span>Good for the broad framing and terminology.</span></li>
+          <li id="ref-2"><a href="https://doi.org/10.1039/C1FD00113B" target="_blank" rel="noreferrer">Styring (2011), “Artificial photosynthesis for solar fuels”</a><span>Useful overview of the solar-fuels argument.</span></li>
+          <li id="ref-3"><a href="https://doi.org/10.1038/nmat2578" target="_blank" rel="noreferrer">Listorti, Durrant, Barber (2009), “Solar to Fuel”</a><span>Classic framing for why molecules matter.</span></li>
+          <li id="ref-4"><a href="https://doi.org/10.1021/ja0776327" target="_blank" rel="noreferrer">Barton, Rampulla, Bocarsly (2008), CO₂ to methanol photoelectrochemical cell</a><span>Early example of sunlight-driven carbon chemistry.</span></li>
+          <li id="ref-5"><a href="https://doi.org/10.1038/s41560-020-0678-6" target="_blank" rel="noreferrer">Wang et al. (2020), Nature Energy — scalable solar formate production from CO₂ and water</a><span>Illustrates the scale-up challenge and the appeal of liquid products.</span></li>
+          <li id="ref-6"><a href="https://doi.org/10.1038/s41586-022-04978-6" target="_blank" rel="noreferrer">Andrei et al. (2022), Nature — floating perovskite-BiVO₄ devices for solar fuel production</a><span>Shows that device engineering, not just chemistry, matters.</span></li>
+          <li id="ref-7"><a href="https://doi.org/10.1021/acs.chemrev.2c00759" target="_blank" rel="noreferrer">Ham et al. (2023), Chemical Reviews — supramolecular cages for artificial photosynthesis</a><span>Nice example of how the field keeps pushing on selectivity and architecture.</span></li>
+        </ol>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p><strong>Artificial Photosynthesis</strong> — a mobile-first explainer with plain-language answers and simple charts.</p>
+    <p><strong>Artificial Photosynthesis</strong> — a mobile-first explainer with plain-language answers, diagrams, charts, and references.</p>
   </footer>
 </body>
 </html>
