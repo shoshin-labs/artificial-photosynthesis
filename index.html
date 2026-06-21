@@ -17,9 +17,10 @@
     <nav class="topbar" aria-label="Section navigation">
       <a class="brand" href="#top">Artificial Photosynthesis</a>
       <div class="pills">
-        <a href="#reactor">Science sandbox</a>
+        <a href="#cockpit">Cockpit</a>
+        <a href="#scenarios">Scenarios</a>
         <a href="#roadmap">Roadmap</a>
-        <a href="#economics">Economics</a>
+        <a href="#gaps">Proof gaps</a>
       </div>
     </nav>
 
@@ -27,10 +28,10 @@
       <section class="hero-copy">
         <p class="eyebrow">Educational concept site · built from Tom’s briefing</p>
         <h1>We aren’t just capturing energy; we are capturing fuel.</h1>
-        <p class="lede">Artificial photosynthesis is the idea of using sunlight to drive chemistry instead of only making electricity. In the simplest version, light, water, and captured CO₂ become hydrogen, methanol, or aviation fuel that can be stored, shipped, and used later.</p>
+        <p class="lede">Artificial photosynthesis is the idea of using sunlight to drive chemistry instead of only making electricity. This version goes a bit further: pick the mission, pick the audience lens, and watch the same solar chemistry tell a different story for hydrogen, methanol, or aviation fuel.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#reactor">Open the science sandbox</a>
-          <a class="button secondary" href="#roadmap">See the roadmap</a>
+          <a class="button primary" href="#cockpit">Open the solar refinery cockpit</a>
+          <a class="button secondary" href="#scenarios">Explore the mission cards</a>
         </div>
       </section>
 
@@ -42,9 +43,9 @@
           <div class="ring ring-c"></div>
         </div>
         <div class="snapshot-grid">
-          <div><span>Core promise</span><strong>Solar fuel</strong></div>
-          <div><span>Main bottlenecks</span><strong>Catalysts + heat</strong></div>
-          <div><span>Timeline theme</span><strong>Pilot → adoption → scale</strong></div>
+          <div><span>Core promise</span><strong>Sunlight → storable fuel</strong></div>
+          <div><span>Novel hook</span><strong>Mission-first interaction</strong></div>
+          <div><span>Big bottlenecks</span><strong>Catalysts + heat + scale</strong></div>
           <div><span>Site angle</span><strong>Public education first</strong></div>
         </div>
       </aside>
@@ -55,23 +56,33 @@
     <section class="section intro-strip">
       <article>
         <h2>What this page is for</h2>
-        <p>This is a polished, shareable static page that explains the idea clearly for the public, policy makers, and curious investors without assuming a chemistry degree. It uses simple language, a clickable reactor model, and a small set of educational controls to show how the system behaves.</p>
+        <p>This is a polished, shareable static page that explains the idea clearly for the public, policy makers, and curious investors without assuming a chemistry degree. It now behaves like a small cockpit: the controls change the narrative, not just the numbers.</p>
       </article>
       <article>
         <h2>What it is not</h2>
-        <p>It is not a lab notebook, not a claim that the economics are solved, and not a promise that the technology is already cheaper than fossil fuels. The point is to make the pathway legible.</p>
+        <p>It is not a lab notebook, not a claim that the economics are solved, and not a promise that the technology is already cheaper than fossil fuels. The point is to make the pathway legible, while being honest about the proof still missing.</p>
       </article>
     </section>
 
-    <section id="reactor" class="section reactor-section">
+    <section id="cockpit" class="section cockpit-section">
       <div class="section-heading">
-        <p class="eyebrow">Informational educational part</p>
-        <h2>Click the modules. Turn the sunlight dial. See the chemistry in motion.</h2>
-        <p>The model below breaks the process into three pieces: light harvesting, water splitting, and carbon reduction. That is the minimum story most people need before the bigger market and policy discussion makes sense.</p>
+        <p class="eyebrow">Solar refinery cockpit</p>
+        <h2>Choose the mission. Adjust the conditions. See how the whole story changes.</h2>
+        <p>This is the more interactive part: mission cards, audience lenses, sliders, and a day-cycle toggle all update the same reactor model. It is less “here is a chart” and more “here is what the machine is trying to become.”</p>
       </div>
 
-      <div class="reactor-grid">
+      <div class="cockpit-grid">
         <div class="reactor-stage">
+          <div class="stage-header">
+            <div>
+              <p class="stage-kicker">Interactive reactor model</p>
+              <h3 id="scene-title">Hydrogen backbone</h3>
+            </div>
+            <div class="stage-meta">
+              <span id="scene-tag">Best for: industrial feedstock</span>
+            </div>
+          </div>
+
           <div class="reactor-shell" aria-label="Interactive photo-reactor model">
             <div class="reactor-glow"></div>
             <div class="beam beam-left"></div>
@@ -90,16 +101,64 @@
 
         <aside class="control-panel">
           <div class="control-block">
-            <label for="sunlight">Sunlight</label>
-            <input id="sunlight" type="range" min="0" max="100" value="68" />
-            <div class="slider-labels"><span>Dim</span><span>Full sun</span></div>
+            <p class="control-label">Mission cards</p>
+            <div class="mission-cards" role="tablist" aria-label="Mission selection">
+              <button class="mission-card active" data-mission="hydrogen" type="button">
+                <strong>Hydrogen backbone</strong>
+                <span>Industrial feedstock, shipping, storage</span>
+              </button>
+              <button class="mission-card" data-mission="methanol" type="button">
+                <strong>Methanol loop</strong>
+                <span>Liquid fuel, easier transport</span>
+              </button>
+              <button class="mission-card" data-mission="saf" type="button">
+                <strong>Aviation fuel</strong>
+                <span>Hard-to-electrify sectors</span>
+              </button>
+              <button class="mission-card" data-mission="fertilizer" type="button">
+                <strong>Fertilizer hub</strong>
+                <span>Ammonia-adjacent industrial chemistry</span>
+              </button>
+            </div>
           </div>
 
           <div class="control-block">
+            <p class="control-label">Audience lens</p>
+            <div class="lens-tabs" role="tablist" aria-label="Audience lens">
+              <button class="lens-tab active" data-audience="public" type="button">Public</button>
+              <button class="lens-tab" data-audience="policy" type="button">Policy</button>
+              <button class="lens-tab" data-audience="investor" type="button">Investor</button>
+            </div>
+          </div>
+
+          <div class="control-block sliders-block">
+            <div class="slider-row">
+              <label for="sunlight">Sunlight</label>
+              <strong id="sunlight-readout">72%</strong>
+            </div>
+            <input id="sunlight" type="range" min="0" max="100" value="72" />
+            <div class="slider-labels"><span>Cloudy dawn</span><span>Brutal noon</span></div>
+
+            <div class="slider-row">
+              <label for="stability">Catalyst stability</label>
+              <strong id="stability-readout">68%</strong>
+            </div>
+            <input id="stability" type="range" min="0" max="100" value="68" />
+            <div class="slider-labels"><span>Fragile</span><span>Rock-solid</span></div>
+
+            <div class="slider-row">
+              <label for="capture">CO₂ capture efficiency</label>
+              <strong id="capture-readout">60%</strong>
+            </div>
+            <input id="capture" type="range" min="0" max="100" value="60" />
+            <div class="slider-labels"><span>Thin feed</span><span>Steady feed</span></div>
+          </div>
+
+          <div class="control-block toggle-block">
             <div class="toggle-row">
               <div>
                 <strong>Inject CO₂</strong>
-                <p>When CO₂ is on, the reactor can move from hydrogen toward carbon-based fuels.</p>
+                <p>When CO₂ is on, the system can move from hydrogen toward carbon-based fuels.</p>
               </div>
               <label class="switch">
                 <input id="co2" type="checkbox" checked />
@@ -108,46 +167,84 @@
             </div>
           </div>
 
-          <div class="control-block">
-            <p class="control-label">Choose the fuel story</p>
-            <div class="fuel-tabs" role="tablist" aria-label="Fuel mode">
-              <button class="fuel-tab active" data-fuel="hydrogen" type="button">Hydrogen</button>
-              <button class="fuel-tab" data-fuel="methanol" type="button">Methanol</button>
-              <button class="fuel-tab" data-fuel="saf" type="button">Aviation fuel</button>
-            </div>
+          <div class="control-block control-buttons">
+            <button id="play-cycle" class="button primary" type="button">Run day cycle</button>
+            <button id="reset" class="button secondary" type="button">Reset mission</button>
           </div>
 
           <div class="output-card">
             <p class="output-kicker">Live readout</p>
-            <h3 id="output-title">Hydrogen-first mode</h3>
-            <p id="output-body">The light-harvesting layer is active. Water is being split into hydrogen and oxygen, which is the simplest way to explain the core AP cycle.</p>
+            <h3 id="output-title">Hydrogen backbone</h3>
+            <p id="output-body">The light-harvesting layer is active. Water is being split into hydrogen and oxygen, which is the cleanest way to explain the core cycle.</p>
             <dl class="metrics">
               <div><dt>Reaction tempo</dt><dd id="tempo">Moderate</dd></div>
               <div><dt>Useful output</dt><dd id="yield">Hydrogen + oxygen</dd></div>
-              <div><dt>Carbon path</dt><dd id="carbon-path">CO₂ is optional right now</dd></div>
+              <div><dt>Carbon path</dt><dd id="carbon-path">CO₂ path is optional</dd></div>
             </dl>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section pathway-section">
+    <section id="scenarios" class="section scenario-section">
       <div class="section-heading narrow">
-        <p class="eyebrow">Plain-English pathways</p>
-        <h2>Three ways the same light can become something useful later.</h2>
+        <p class="eyebrow">Scenario explorer</p>
+        <h2>Same sunlight, different endgame.</h2>
       </div>
       <div class="card-grid three-up">
-        <article class="info-card">
-          <h3>Hydrogen</h3>
-          <p>The cleanest starting point. Sunlight helps split water, and the hydrogen can be stored or used as an industrial feedstock.</p>
+        <article class="info-card scenario-card">
+          <h3>Hydrogen backbone</h3>
+          <p>Best when the output is an industrial ingredient first and a fuel second. It is the simplest entry point, but not the most glamorous one.</p>
+          <ul>
+            <li>clean starting point</li>
+            <li>easy mental model</li>
+            <li>strong for heavy industry</li>
+          </ul>
         </article>
-        <article class="info-card">
-          <h3>Methanol</h3>
-          <p>Add captured CO₂ and you can make a liquid fuel that is easier to ship and handle than hydrogen gas.</p>
+        <article class="info-card scenario-card">
+          <h3>Methanol loop</h3>
+          <p>Bring captured CO₂ back into the story and the page becomes about liquid fuel logistics, not just chemistry in a beaker.</p>
+          <ul>
+            <li>liquid handling</li>
+            <li>transport-friendly</li>
+            <li>bridges capture and fuel</li>
+          </ul>
         </article>
-        <article class="info-card">
+        <article class="info-card scenario-card">
           <h3>Aviation fuel</h3>
-          <p>With enough engineering, AP can be part of the synthetic-fuel route for sectors that are hard to electrify.</p>
+          <p>The hard mode. It is where artificial photosynthesis has to stop sounding clever and start surviving the cost curve.</p>
+          <ul>
+            <li>hard-to-electrify demand</li>
+            <li>high value per unit energy</li>
+            <li>brutal certification bar</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="gaps" class="section gaps-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Proof gaps</p>
+        <h2>The novel bit is not pretending uncertainty is solved. It is surfacing it.</h2>
+      </div>
+      <div class="card-grid two-up">
+        <article class="info-card gap-card">
+          <h3>What still has to prove itself</h3>
+          <ul>
+            <li>catalyst durability under sun and heat</li>
+            <li>selectivity: making the right molecule, not a soup</li>
+            <li>system engineering at outdoor scale</li>
+            <li>real-world cost versus the fossil route</li>
+          </ul>
+        </article>
+        <article class="info-card gap-card">
+          <h3>What the cockpit shows you</h3>
+          <p>The “proof meter” responds to the sliders. It is not a fake KPI; it is a reminder that an elegant molecule still needs an ugly factory, a supply chain, and a maintenance plan.</p>
+          <div class="proof-meter">
+            <div class="proof-bar"><span>Field readiness</span><div><i id="readiness-bar"></i></div><strong id="readiness-readout">—</strong></div>
+            <div class="proof-bar"><span>Carbon loop strength</span><div><i id="carbon-bar"></i></div><strong id="carbon-readout">—</strong></div>
+            <div class="proof-bar"><span>Investor patience</span><div><i id="patience-bar"></i></div><strong id="patience-readout">—</strong></div>
+          </div>
         </article>
       </div>
     </section>
@@ -160,40 +257,18 @@
       <div class="timeline">
         <article class="timeline-item">
           <span>2026–2030</span>
-          <h3>Pilot phase</h3>
+          <h3>Mission fit</h3>
           <p>Prove the catalysts survive sunlight, heat, and real-world conditions without falling apart immediately.</p>
         </article>
         <article class="timeline-item">
           <span>2030–2035</span>
-          <h3>Early adoption</h3>
-          <p>Integrate AP with heavy-emitting industries so sites can capture their own CO₂ and convert it into useful chemicals on-site.</p>
+          <h3>Industrial pilots</h3>
+          <p>Integrate AP with heavy-emitting sites so captured CO₂ can become fuel on-site instead of becoming a transport problem.</p>
         </article>
         <article class="timeline-item">
           <span>2035–2040+</span>
-          <h3>Utility scale</h3>
+          <h3>Scale-out play</h3>
           <p>Chase cost parity for hydrogen or liquid fuels so larger solar-fuel facilities can compete with fossil routes.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="economics" class="section economics-section">
-      <div class="section-heading narrow">
-        <p class="eyebrow">Economics, but still readable</p>
-        <h2>The money problem is the bridge from promising chemistry to industrial hardware.</h2>
-      </div>
-      <div class="card-grid two-up">
-        <article class="info-card">
-          <h3>What slows it down</h3>
-          <ul>
-            <li>catalyst durability</li>
-            <li>reactor engineering at scale</li>
-            <li>heat losses and harsh outdoor conditions</li>
-            <li>the gap between prototype and commercial deployment</li>
-          </ul>
-        </article>
-        <article class="info-card">
-          <h3>Why the project exists anyway</h3>
-          <p>The case for AP is not that batteries disappear. It is that some energy should be stored as fuel, especially where long-duration storage, shipping, or industrial chemistry matter more than electrons alone.</p>
         </article>
       </div>
     </section>
@@ -201,7 +276,7 @@
     <section class="section sources-section">
       <div class="section-heading narrow">
         <p class="eyebrow">Source notes</p>
-        <h2>Built from the material you sent.</h2>
+        <h2>Built from the material you sent, but pushed further into a real interactive concept.</h2>
       </div>
       <div class="source-row">
         <article class="source-card"><strong>Market</strong><p>P&amp;S Intelligence, 2025</p></article>
