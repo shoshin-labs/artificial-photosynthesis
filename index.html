@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Artificial Photosynthesis: a public-facing educational site that explains how sunlight, water, and CO₂ can become storable fuel." />
+  <meta property="og:title" content="Artificial Photosynthesis" />
+  <meta property="og:description" content="An educational concept site about turning sunlight, water, and CO₂ into storable fuels." />
+  <meta property="og:type" content="website" />
+  <title>Artificial Photosynthesis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="hero" id="top">
+    <nav class="topbar" aria-label="Section navigation">
+      <a class="brand" href="#top">Artificial Photosynthesis</a>
+      <div class="pills">
+        <a href="#reactor">Science sandbox</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#economics">Economics</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <section class="hero-copy">
+        <p class="eyebrow">Educational concept site · built from Tom’s briefing</p>
+        <h1>We aren’t just capturing energy; we are capturing fuel.</h1>
+        <p class="lede">Artificial photosynthesis is the idea of using sunlight to drive chemistry instead of only making electricity. In the simplest version, light, water, and captured CO₂ become hydrogen, methanol, or aviation fuel that can be stored, shipped, and used later.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#reactor">Open the science sandbox</a>
+          <a class="button secondary" href="#roadmap">See the roadmap</a>
+        </div>
+      </section>
+
+      <aside class="hero-card" aria-label="Project snapshot">
+        <div class="orbital">
+          <div class="sun"></div>
+          <div class="ring ring-a"></div>
+          <div class="ring ring-b"></div>
+          <div class="ring ring-c"></div>
+        </div>
+        <div class="snapshot-grid">
+          <div><span>Core promise</span><strong>Solar fuel</strong></div>
+          <div><span>Main bottlenecks</span><strong>Catalysts + heat</strong></div>
+          <div><span>Timeline theme</span><strong>Pilot → adoption → scale</strong></div>
+          <div><span>Site angle</span><strong>Public education first</strong></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section intro-strip">
+      <article>
+        <h2>What this page is for</h2>
+        <p>This is a polished, shareable static page that explains the idea clearly for the public, policy makers, and curious investors without assuming a chemistry degree. It uses simple language, a clickable reactor model, and a small set of educational controls to show how the system behaves.</p>
+      </article>
+      <article>
+        <h2>What it is not</h2>
+        <p>It is not a lab notebook, not a claim that the economics are solved, and not a promise that the technology is already cheaper than fossil fuels. The point is to make the pathway legible.</p>
+      </article>
+    </section>
+
+    <section id="reactor" class="section reactor-section">
+      <div class="section-heading">
+        <p class="eyebrow">Informational educational part</p>
+        <h2>Click the modules. Turn the sunlight dial. See the chemistry in motion.</h2>
+        <p>The model below breaks the process into three pieces: light harvesting, water splitting, and carbon reduction. That is the minimum story most people need before the bigger market and policy discussion makes sense.</p>
+      </div>
+
+      <div class="reactor-grid">
+        <div class="reactor-stage">
+          <div class="reactor-shell" aria-label="Interactive photo-reactor model">
+            <div class="reactor-glow"></div>
+            <div class="beam beam-left"></div>
+            <div class="beam beam-right"></div>
+            <div class="module module-light" data-module="light"><span>1</span><strong>Light harvesting</strong></div>
+            <div class="module module-water" data-module="water"><span>2</span><strong>Water splitting</strong></div>
+            <div class="module module-carbon" data-module="carbon"><span>3</span><strong>Carbon reduction</strong></div>
+            <div class="core core-a"></div>
+            <div class="core core-b"></div>
+            <div class="core core-c"></div>
+            <div class="product product-h2" aria-hidden="true">H₂</div>
+            <div class="product product-co" aria-hidden="true">CO₂</div>
+            <div class="product product-fuel" aria-hidden="true">Fuel</div>
+          </div>
+        </div>
+
+        <aside class="control-panel">
+          <div class="control-block">
+            <label for="sunlight">Sunlight</label>
+            <input id="sunlight" type="range" min="0" max="100" value="68" />
+            <div class="slider-labels"><span>Dim</span><span>Full sun</span></div>
+          </div>
+
+          <div class="control-block">
+            <div class="toggle-row">
+              <div>
+                <strong>Inject CO₂</strong>
+                <p>When CO₂ is on, the reactor can move from hydrogen toward carbon-based fuels.</p>
+              </div>
+              <label class="switch">
+                <input id="co2" type="checkbox" checked />
+                <span></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="control-label">Choose the fuel story</p>
+            <div class="fuel-tabs" role="tablist" aria-label="Fuel mode">
+              <button class="fuel-tab active" data-fuel="hydrogen" type="button">Hydrogen</button>
+              <button class="fuel-tab" data-fuel="methanol" type="button">Methanol</button>
+              <button class="fuel-tab" data-fuel="saf" type="button">Aviation fuel</button>
+            </div>
+          </div>
+
+          <div class="output-card">
+            <p class="output-kicker">Live readout</p>
+            <h3 id="output-title">Hydrogen-first mode</h3>
+            <p id="output-body">The light-harvesting layer is active. Water is being split into hydrogen and oxygen, which is the simplest way to explain the core AP cycle.</p>
+            <dl class="metrics">
+              <div><dt>Reaction tempo</dt><dd id="tempo">Moderate</dd></div>
+              <div><dt>Useful output</dt><dd id="yield">Hydrogen + oxygen</dd></div>
+              <div><dt>Carbon path</dt><dd id="carbon-path">CO₂ is optional right now</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section pathway-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Plain-English pathways</p>
+        <h2>Three ways the same light can become something useful later.</h2>
+      </div>
+      <div class="card-grid three-up">
+        <article class="info-card">
+          <h3>Hydrogen</h3>
+          <p>The cleanest starting point. Sunlight helps split water, and the hydrogen can be stored or used as an industrial feedstock.</p>
+        </article>
+        <article class="info-card">
+          <h3>Methanol</h3>
+          <p>Add captured CO₂ and you can make a liquid fuel that is easier to ship and handle than hydrogen gas.</p>
+        </article>
+        <article class="info-card">
+          <h3>Aviation fuel</h3>
+          <p>With enough engineering, AP can be part of the synthetic-fuel route for sectors that are hard to electrify.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Roadmap</p>
+        <h2>From lab chemistry to something that can survive outside the lab.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <span>2026–2030</span>
+          <h3>Pilot phase</h3>
+          <p>Prove the catalysts survive sunlight, heat, and real-world conditions without falling apart immediately.</p>
+        </article>
+        <article class="timeline-item">
+          <span>2030–2035</span>
+          <h3>Early adoption</h3>
+          <p>Integrate AP with heavy-emitting industries so sites can capture their own CO₂ and convert it into useful chemicals on-site.</p>
+        </article>
+        <article class="timeline-item">
+          <span>2035–2040+</span>
+          <h3>Utility scale</h3>
+          <p>Chase cost parity for hydrogen or liquid fuels so larger solar-fuel facilities can compete with fossil routes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="economics" class="section economics-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Economics, but still readable</p>
+        <h2>The money problem is the bridge from promising chemistry to industrial hardware.</h2>
+      </div>
+      <div class="card-grid two-up">
+        <article class="info-card">
+          <h3>What slows it down</h3>
+          <ul>
+            <li>catalyst durability</li>
+            <li>reactor engineering at scale</li>
+            <li>heat losses and harsh outdoor conditions</li>
+            <li>the gap between prototype and commercial deployment</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Why the project exists anyway</h3>
+          <p>The case for AP is not that batteries disappear. It is that some energy should be stored as fuel, especially where long-duration storage, shipping, or industrial chemistry matter more than electrons alone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section sources-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Source notes</p>
+        <h2>Built from the material you sent.</h2>
+      </div>
+      <div class="source-row">
+        <article class="source-card"><strong>Market</strong><p>P&amp;S Intelligence, 2025</p></article>
+        <article class="source-card"><strong>Breakthroughs</strong><p>Nature Chemistry, Mar 2025; Twelve funding, Sept 2024</p></article>
+        <article class="source-card"><strong>Roadmap framing</strong><p>World Economic Forum, Oct 2025</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Artificial Photosynthesis</strong> — concept page for education, policy discussion, and investor screening.</p>
+    <p>Built as a static site so it can be posted to GitHub Pages directly.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
