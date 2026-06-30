@@ -1,34 +1,34 @@
-# Artificial Photosynthesis
+# Made from Air
 
-A static, GitHub Pages-ready educational site that turns the briefing into a public-facing explainer.
+A lightweight public-facing library for CO2-made products, fossil-free materials, and the companies turning carbon into fuels, chemicals, and consumer-product inputs.
 
 ## What it includes
 
-- Hero section with the core thesis
-- Interactive science sandbox for the educational/public part
-- Plain-English pathway cards for hydrogen, methanol, and aviation fuel
-- Roadmap section for pilot → adoption → scale
-- Short economics/bottleneck section
-- Source-note footer
+- Editorial homepage framing the project as a live archive and highlight reel
+- A library page that now foregrounds the freshest 2025–2026 Twelve material
+- Audience-guided entry points for brand teams, investors, journalists, and commercial partners
+- Official videos, press coverage, and adjacent market/context links
+- A deployable static `dist/` output for Cloudflare Pages
 
 ## Local preview
-
-Recommended:
 
 ```bash
 ./serve.sh
 ```
 
-Or use Python directly:
+The script binds to `127.0.0.1`, starts at port `8095`, and automatically picks the first free port in a short range.
+
+If you are checking the library directly, use the explicit page URL:
+
+- `http://127.0.0.1:<port>/index.html`
+- `http://127.0.0.1:<port>/library.html`
+
+## Cloudflare Pages deploy
+
+This repo deploys to the Cloudflare Pages project `made-from-air`.
+
+To deploy again:
 
 ```bash
-python3 -m http.server 8096 --bind 127.0.0.1
+npx wrangler pages deploy dist --project-name=made-from-air --branch=main
 ```
-
-Then open the printed localhost URL.
-
-## Notes
-
-- The site is self-contained: HTML, CSS, and vanilla JavaScript only.
-- It is designed to drop straight into GitHub Pages.
-- The science copy is written as an educational concept page, not a claim that commercialization is solved.

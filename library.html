@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A structured public library for carbon-made products: fresh commercial signals, explainers, policy, brand pilots, buyer education, and selected media context." />
+  <meta property="og:title" content="Made from Air — Library" />
+  <meta property="og:description" content="The public library for products made from air: latest signals, evergreen explainers, themed collections, and audience-specific routes." />
+  <meta property="og:type" content="website" />
+  <title>Made from Air — Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260622h" />
+</head>
+<body class="page-library">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-hero library-hero-frame" id="top">
+    <nav class="topbar shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html">Made from Air</a>
+      <div class="nav-links">
+        <a href="#featured-signal">Featured</a>
+        <a href="#signal-board">Signal board</a>
+        <a href="#collections">Collections</a>
+        <a href="#evergreen">Explainers</a>
+        <a href="#coverage">Coverage</a>
+      </div>
+    </nav>
+
+    <div class="shell hero-layout library-hero-layout">
+      <section class="hero-copy hero-surface">
+        <p class="eyebrow">Living public library</p>
+        <h1>The public library for products made from air.</h1>
+        <p class="lede">Fresh company signals first, then the structures that make the category understandable: buyer education, policy, partnerships, visible product proof, and a carefully trimmed layer of outside coverage.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#signal-board">Browse the signal board</a>
+          <a class="button secondary" href="#collections">Jump to themed collections</a>
+        </div>
+      </section>
+
+      <aside class="hero-monitor hero-surface" aria-label="Library summary">
+        <div class="monitor-panel">
+          <div class="monitor-block">
+            <p class="monitor-label">Reading model</p>
+            <ul class="monitor-list">
+              <li><strong>Fresh signals</strong><span>what has changed lately</span></li>
+              <li><strong>Collections</strong><span>what kind of signal it is</span></li>
+              <li><strong>Explainers</strong><span>how to describe it clearly</span></li>
+            </ul>
+          </div>
+          <div class="monitor-block">
+            <p class="monitor-label">At a glance</p>
+            <div class="monitor-grid compact-stats">
+              <div><span>latest items</span><strong id="count-signals">0</strong></div>
+              <div><span>themes</span><strong>6</strong></div>
+              <div><span>evergreen pages</span><strong id="count-evergreen">0</strong></div>
+              <div><span>coverage picks</span><strong id="count-coverage">0</strong></div>
+            </div>
+          </div>
+          <div class="monitor-block monitor-footnote">
+            <p><strong>Current editorial bias:</strong> the strongest 2025–2026 signal is on Twelve’s own site and product pages, not mainly in the older video archive.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section shell note-strip">
+      <article class="note-card">
+        <h2>How to use this page</h2>
+        <p>Start with the featured signal if you want the headline change. Use the signal board if you want to scan the latest evidence. Use collections if your question is about policy, buyer education, commercial readiness, or brand/product proof.</p>
+      </article>
+      <article class="note-card alt">
+        <h2>Editorial rule</h2>
+        <p>A link stays only if it clarifies the category, shows a credible commercial move, demonstrates a real product or infrastructure proof, or helps a reader explain the space without fluff.</p>
+      </article>
+    </section>
+
+    <section id="featured-signal" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">Featured signal</p>
+        <h2>The current centre of gravity is commercialisation</h2>
+      </div>
+      <article id="featured-card" class="featured-library-card"></article>
+    </section>
+
+    <section id="signal-board" class="section shell">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Signal board</p>
+        <h2>Filter the latest category evidence by theme, audience, or keyword</h2>
+      </div>
+
+      <div class="filter-panel" aria-label="Signal board filters">
+        <div class="filter-row filter-row-search">
+          <label class="search-field" for="search-input">
+            <span class="search-label">Search</span>
+            <input id="search-input" type="search" placeholder="Search plants, policy, product pilots, pricing, partnerships…" />
+          </label>
+          <div class="filter-status">
+            <span class="mini-label">Showing</span>
+            <strong id="results-count">0 items</strong>
+          </div>
+        </div>
+        <div class="filter-row">
+          <div class="chip-group" id="theme-filters" aria-label="Filter by theme"></div>
+        </div>
+        <div class="filter-row">
+          <div class="chip-group" id="audience-filters" aria-label="Filter by audience"></div>
+        </div>
+      </div>
+
+      <div id="signal-grid" class="resource-grid resource-grid-main"></div>
+    </section>
+
+    <section id="collections" class="section shell">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Curated collections</p>
+        <h2>Six tighter routes through the archive, based on the kind of question a reader actually has</h2>
+      </div>
+      <div id="collections-grid" class="collection-grid"></div>
+    </section>
+
+    <section id="reader-routes" class="section shell">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Reading routes</p>
+        <h2>If you only have five minutes, start with the route that matches your job</h2>
+      </div>
+      <div id="reader-routes-grid" class="reader-route-grid"></div>
+    </section>
+
+    <section id="evergreen" class="section shell">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Core explainers</p>
+        <h2>The evergreen pages and explainers that make the category legible fast</h2>
+      </div>
+      <div id="evergreen-grid" class="resource-grid resource-grid-secondary"></div>
+    </section>
+
+    <section id="coverage" class="section shell coverage-section">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Outside coverage</p>
+        <h2>Selected video and press context that helps widen the frame without overwhelming it</h2>
+      </div>
+      <div class="coverage-columns">
+        <div>
+          <h3 class="coverage-heading">Video picks</h3>
+          <div id="video-grid" class="resource-grid resource-grid-secondary"></div>
+        </div>
+        <div>
+          <h3 class="coverage-heading">Press and market framing</h3>
+          <div id="press-grid" class="resource-grid resource-grid-secondary"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="section shell">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow">Method</p>
+        <h2>How the library decides what belongs here and what gets demoted</h2>
+      </div>
+      <div class="method-grid">
+        <article class="method-card">
+          <span class="mini-label">Keep</span>
+          <h3>Commercial proof, product proof, and category clarity</h3>
+          <p>Priority goes to plants, partnerships, economics, explainers, buyer education, policy structure, and visible product or brand pilots.</p>
+        </article>
+        <article class="method-card">
+          <span class="mini-label">Demote</span>
+          <h3>Generic climate-tech mood music</h3>
+          <p>Repetitive hype videos, vague future-of-everything pieces, and links that sound exciting without improving understanding are kept out or pushed down.</p>
+        </article>
+        <article class="method-card">
+          <span class="mini-label">Current bias</span>
+          <h3>The most useful fresh signal now lives on company and product pages</h3>
+          <p>This archive treats the older YouTube layer as context, not as the main source of 2025–2026 movement.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <p>Made from Air is a public reference for the carbon-made products category: commercial signals, explainers, policy, and visible product proof in one place.</p>
+  </footer>
+
+  <script src="library.js?v=20260622h" defer></script>
+</body>
+</html>

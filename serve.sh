@@ -1,27 +1,39 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 HOST="${HOST:-127.0.0.1}"
-START_PORT="${START_PORT:-8096}"
-END_PORT="${END_PORT:-8106}"
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+START_PORT="${PORT:-8095}"
+END_PORT=$((START_PORT + 25))
 
-for port in $(seq "$START_PORT" "$END_PORT"); do
-  if python3 - <<'PY' "$HOST" "$port" >/dev/null 2>&1; then
+port_is_free() {
+  python3 - "$1" "$HOST" <<'PY'
 import socket, sys
-host = sys.argv[1]
-port = int(sys.argv[2])
+port = int(sys.argv[1])
+host = sys.argv[2]
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    sock.settimeout(0.2)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     try:
         sock.bind((host, port))
     except OSError:
         raise SystemExit(1)
+raise SystemExit(0)
 PY
-    echo "Serving ${DIR} at http://${HOST}:${port}"
-    exec python3 -m http.server "$port" --bind "$HOST" --directory "$DIR"
+}
+
+PORT_CHOSEN=""
+for candidate in $(seq "$START_PORT" "$END_PORT"); do
+  if port_is_free "$candidate"; then
+    PORT_CHOSEN="$candidate"
+    break
   fi
 done
 
-echo "No free port found in ${START_PORT}-${END_PORT}" >&2
-exit 1
+if [[ -z "$PORT_CHOSEN" ]]; then
+  echo "No free port found between $START_PORT and $END_PORT" >&2
+  exit 1
+fi
+
+echo "Serving Made from Air at http://$HOST:$PORT_CHOSEN/index.html"
+echo "Library page: http://$HOST:$PORT_CHOSEN/library.html"
+exec python3 -m http.server "$PORT_CHOSEN" --bind "$HOST" --directory "$DIR"
